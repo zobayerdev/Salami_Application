@@ -18,9 +18,11 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String[] cameraPermissions;
     private String[] storagePermissions;
+    private ImageButton backBtn;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -48,11 +51,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().hide();
+
         //init id
         add = findViewById(R.id.addBtn);
         name = findViewById(R.id.nameEt);
         phone = findViewById(R.id.phoneEt);
         imageIv = findViewById(R.id.imageIv);
+
+        backBtn = findViewById(R.id.backBtn);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         // check camera and storage permission to get image from user
         cameraPermissions = new String[]{android.Manifest.permission.CAMERA, android.Manifest.permission.WRITE_EXTERNAL_STORAGE};
@@ -67,13 +80,19 @@ public class MainActivity extends AppCompatActivity {
                 String surename = name.getText().toString().trim();
                 String surephone = phone.getText().toString().trim();
 
-                if(surename != null)
+                if( TextUtils.isEmpty(surename))
                 {
                     Toast.makeText(MainActivity.this, "Please enter your name", Toast.LENGTH_SHORT).show();
+                    return;
                 }
-               else if(surephone != null)
+               else if(TextUtils.isEmpty (surephone))
                 {
                     Toast.makeText(MainActivity.this, "Please enter your Phone Number", Toast.LENGTH_SHORT).show();
+                }
+               else if (image_uri == null)
+                {
+                    Toast.makeText(MainActivity.this, "Please enter your image", Toast.LENGTH_SHORT).show();
+                    return;
                 }
                else {
                     // passing data on another activity

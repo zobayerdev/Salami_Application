@@ -7,42 +7,75 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/shape_rect01"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/kalpurush"
+            android:text="কার্ডের জন্য প্রয়োজনীয় তথ্য প্রদান করুন"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+
     <ImageView
         android:id="@+id/imageIv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_person" />
+        android:src="@drawable/ic_image" />
 
     <EditText
         android:id="@+id/nameEt"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="10dp"
+        android:background="@drawable/edittext_shape"
         android:ems="10"
-        android:fontFamily="@font/trebuc"
-        android:hint="Enter your Name: "
+        android:fontFamily="@font/shorif_sayef"
+        android:hint="আপনার নাম লিখুন"
         android:inputType="text"
+        android:padding="15dp"
         android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/phoneEt"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="10dp"
+        android:background="@drawable/edittext_shape"
         android:ems="10"
-        android:fontFamily="@font/trebuc"
-        android:hint="Enter your Name: "
+        android:fontFamily="@font/shorif_sayef"
+        android:hint="আপনার বিকাশ নাম্বার প্রদান করুন"
         android:inputType="text"
+        android:padding="15dp"
         android:textColor="@color/black" />
 
     <Button
         android:id="@+id/addBtn"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="10dp"
         android:backgroundTint="@color/black"
-        android:text="Add"
+        android:fontFamily="@font/shorif_sayef"
+        android:text="চলুন শুরু করা যাক "
         android:textAllCaps="false" />
 
 </LinearLayout>
