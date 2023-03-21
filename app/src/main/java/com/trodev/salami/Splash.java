@@ -17,7 +17,6 @@ public class Splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
         getSupportActionBar().hide();
 
         button = findViewById(R.id. btn);
@@ -26,6 +25,7 @@ public class Splash extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Splash.this, MainActivity.class));
+                finishAffinity();
             }
         });
     }

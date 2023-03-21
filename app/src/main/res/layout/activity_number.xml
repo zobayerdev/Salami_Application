@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NumberActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_rect01"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/kalpurush"
+            android:text="কার্ডের জন্য প্রয়োজনীয় নাম্বার প্রদান করুন"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/phone" />
+
+    <ImageView
+        android:id="@+id/imageIv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_person" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/trebuc"
+            android:text="Name:"
+            android:textColor="@color/black"
+            android:textSize="1sp"
+
+            />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/trebuc"
+            android:text="Full Na"
+            android:textColor="@color/black"
+            android:textSize="1sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarThumbVertical="@android:color/transparent"
+        android:scrollbars="vertical"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/bkash" />
+
+                <EditText
+                    android:id="@+id/bikashEt"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/edittext_shape"
+                    android:ems="10"
+                    android:fontFamily="@font/shorif_sayef"
+                    android:hint="আপনার ১২ ডিজিটের বিকাশ নাম্বার দিন"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:padding="15dp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/nogod" />
+
+                <EditText
+                    android:id="@+id/nogodEt"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/edittext_shape"
+                    android:ems="10"
+                    android:fontFamily="@font/shorif_sayef"
+                    android:hint="আপনার ১২ ডিজিটের নগদ নাম্বার দিন"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:padding="15dp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/upay" />
+
+                <EditText
+                    android:id="@+id/upayEt"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/edittext_shape"
+                    android:ems="10"
+                    android:fontFamily="@font/shorif_sayef"
+                    android:hint="আপনার ১২ ডিজিটের উপায় নাম্বার দিন"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:padding="15dp"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/rocket" />
+
+                <EditText
+                    android:id="@+id/rocketEt"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/edittext_shape"
+                    android:ems="10"
+                    android:fontFamily="@font/shorif_sayef"
+                    android:hint="আপনার ১২ ডিজিটের রকেট নাম্বার দিন"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:padding="15dp"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/shorif_sayef"
+        android:text="অগ্রসর হোন"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+</LinearLayout>

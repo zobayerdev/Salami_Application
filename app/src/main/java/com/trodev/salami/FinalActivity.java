@@ -2,7 +2,6 @@ package com.trodev.salami;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,9 +9,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity {
+public class FinalActivity extends AppCompatActivity {
 
-    TextView name, phone;
+    TextView name, bikash, nogod, upay, rocket;
     ImageView imageView;
 
     @SuppressLint("MissingInflatedId")
@@ -25,18 +24,27 @@ public class SecondActivity extends AppCompatActivity {
 
         //init views
         name = findViewById(R.id.nameTv);
-        phone = findViewById(R.id.phoneTv);
+        bikash = findViewById(R.id.bikashTv);
+        nogod = findViewById(R.id. nogodTv);
+        upay = findViewById(R.id. upayTv);
+        rocket = findViewById(R.id. rocketTv);
         imageView = findViewById(R.id.imageIv);
 
         String surename = getIntent().getStringExtra("surename");
-        String surephone = getIntent().getStringExtra("surephone");
+        String surebikash = getIntent().getStringExtra("surebikash");
+        String surenogod = getIntent().getStringExtra("surenogod");
+        String sureupay = getIntent().getStringExtra("sureupay");
+        String surerocket = getIntent().getStringExtra("surerocket");
 
         byte[] bytes = getIntent().getByteArrayExtra("avater");
         Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
 
         // set all  data on textview and imageview.
         name.setText(surename);
-        phone.setText(surephone);
+        bikash.setText(surebikash);
+        nogod.setText(surenogod);
+        upay.setText(sureupay);
+        rocket.setText(surerocket);
         imageView.setImageBitmap(bitmap);
 
     }

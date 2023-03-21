@@ -14,6 +14,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -26,13 +27,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button add;
-    private EditText name, phone;
+    private EditText name;
     private ImageView imageIv;
     private Uri image_uri;
 
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         //init id
         add = findViewById(R.id.addBtn);
         name = findViewById(R.id.nameEt);
-        phone = findViewById(R.id.phoneEt);
+        // phone = findViewById(R.id.phoneEt);
         imageIv = findViewById(R.id.imageIv);
 
         backBtn = findViewById(R.id.backBtn);
@@ -78,32 +78,24 @@ public class MainActivity extends AppCompatActivity {
 
                 // get text on edittext
                 String surename = name.getText().toString().trim();
-                String surephone = phone.getText().toString().trim();
 
-                if( TextUtils.isEmpty(surename))
-                {
-                    Toast.makeText(MainActivity.this, "Please enter your name", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(surename)) {
+                    Toast.makeText(MainActivity.this, "আপনার নাম প্রদান করুন", Toast.LENGTH_SHORT).show();
                     return;
-                }
-               else if(TextUtils.isEmpty (surephone))
-                {
-                    Toast.makeText(MainActivity.this, "Please enter your Phone Number", Toast.LENGTH_SHORT).show();
-                }
-               else if (image_uri == null)
-                {
-                    Toast.makeText(MainActivity.this, "Please enter your image", Toast.LENGTH_SHORT).show();
+                } else if (image_uri == null) {
+                    Toast.makeText(MainActivity.this, "আপনার ছবি সিলেক্ট করুন", Toast.LENGTH_SHORT).show();
                     return;
-                }
-               else {
+                } else {
                     // passing data on another activity
-                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                    Intent intent = new Intent(MainActivity.this, NumberActivity.class);
                     intent.putExtra("surename", surename);
-                    intent.putExtra("surephone", surephone);
                     intent.putExtra("avater", imageViewToByte());
                     startActivity(intent);
                 }
+
             }
         });
+
 
         imageIv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
         Bitmap bitmap = ((BitmapDrawable) imageIv.getDrawable()).getBitmap();
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 60, byteArrayOutputStream);
         byte[] bytes = byteArrayOutputStream.toByteArray();
 
         return bytes;
@@ -126,25 +118,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void showImagePickDialog() {
 
-        String[] option = {"Camera", "Gallery"};
+        String[] option = {"Gallery"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Pick Image")
                 .setItems(option, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int which) {
                         if (which == 0) {
-                            if (checkCameraPermission()) {
-                                pickFromCamera();
-                            } else {
-                                requestCameraPermission();
-                            }
-                        } else {
                             if (checkStoragePermission()) {
                                 pickFromGallery();
                             } else {
                                 requestStoragePermission();
                             }
-
                         }
                     }
                 })
