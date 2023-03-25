@@ -19,26 +19,23 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_gravity="center"
             >
 
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_gravity="center"
             android:src="@drawable/ic_person" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="আসন্ন ঈদে আমার সালামি খরচ সহ দেওয়ার জন্য আবেদন জানাচ্ছি"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/kalpurush"
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/kalpurush"
+                android:text="আসন্ন ঈদে আমার সালামি খরচ সহ দেওয়ার জন্য আবেদন জানাচ্ছি"
+                android:textColor="@color/black" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
