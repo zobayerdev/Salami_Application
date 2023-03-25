@@ -11,11 +11,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ঈদ সালামি নাও প্রিয়জনদের থেকে"
+        android:text="ঈদের সালামি নাও প্রিয়জনদের থেকে"
         android:fontFamily="@font/kalpurush"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_gravity="center"
+        android:textStyle="bold"
         />
 
     <ImageView
@@ -29,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="দৃষ্টি নন্দন গিফট কার্ড\nতৈরি করে নেও এখনি"
-        android:fontFamily="@font/kalpurush"
+        android:fontFamily="@font/shorif_sayef"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_gravity="center"
@@ -48,5 +49,17 @@
         android:textSize="20sp"
         />
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 2023 ©copyright reserved Trodev"
+        android:fontFamily="@font/trebuc"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        />
 
 </LinearLayout>

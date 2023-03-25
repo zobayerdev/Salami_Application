@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 public class FinalActivity extends AppCompatActivity {
 
-    TextView name, bikash, nogod, upay, rocket;
-    ImageView imageView;
+    TextView name, bikash, nogod, upay, rocket, name2, bikash2, nogod2, upay2, rocket2 ;
+    ImageView imageView, imageView2;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -30,6 +30,15 @@ public class FinalActivity extends AppCompatActivity {
         rocket = findViewById(R.id. rocketTv);
         imageView = findViewById(R.id.imageIv);
 
+
+        //init second view
+        name2 = findViewById(R.id.nameTv2);
+        bikash2 = findViewById(R.id. bikashTv2);
+        imageView2 = findViewById(R.id.imageIv2);
+/*        nogod2 = findViewById(R.id. nogodTv2);
+        upay2 = findViewById(R.id. upayTv2);
+        rocket2 = findViewById(R.id. rocketTv2);*/
+
         String surename = getIntent().getStringExtra("surename");
         String surebikash = getIntent().getStringExtra("surebikash");
         String surenogod = getIntent().getStringExtra("surenogod");
@@ -46,6 +55,10 @@ public class FinalActivity extends AppCompatActivity {
         upay.setText(sureupay);
         rocket.setText(surerocket);
         imageView.setImageBitmap(bitmap);
+        imageView2.setImageBitmap(bitmap);
+
+        name2.setText(surename);
+        bikash2.setText(surebikash);
 
     }
 }
