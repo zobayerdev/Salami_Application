@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Salami</string>
+    <string name="start">Open</string>
+    <string name="close">Close</string>
 </resources>

@@ -4,62 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".Splash">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ঈদের সালামি নাও প্রিয়জনদের থেকে"
+        android:layout_gravity="center"
         android:fontFamily="@font/kalpurush"
+        android:text="ঈদের সালামি নাও প্রিয়জনদের থেকে"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/gift"
         android:layout_gravity="center"
-        />
+        android:src="@drawable/gift" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="দৃষ্টি নন্দন গিফট কার্ড\nতৈরি করে নেও এখনি"
-        android:fontFamily="@font/shorif_sayef"
-        android:textColor="@color/black"
-        android:textSize="20sp"
         android:layout_gravity="center"
-        />
+        android:fontFamily="@font/shorif_sayef"
+        android:text="দৃষ্টি নন্দন গিফট কার্ড\nতৈরি করে নেও এখনি"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="চলুন শুরু করা যাক "
-        android:fontFamily="@font/shorif_sayef"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/white"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:textSize="20sp"
-        />
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/shorif_sayef"
+        android:text="চলুন শুরু করা যাক "
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" 2023 ©copyright reserved Trodev"
-        android:fontFamily="@font/trebuc"
-        android:textColor="@color/black"
-        android:textSize="15sp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:textStyle="bold"
-        />
+        android:fontFamily="@font/trebuc"
+        android:text=" 2023 ©copyright reserved Trodev"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

@@ -19,7 +19,7 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         getSupportActionBar().hide();
 
-        button = findViewById(R.id. btn);
+        button = findViewById(R.id.btn);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
