@@ -72,7 +72,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginStart="100dp"
-                            android:fontFamily="@font/trebuc"
+                            android:fontFamily="@font/kalpurush"
                             android:text="user name "
                             android:textColor="@color/black"
                             android:textSize="12sp"
@@ -216,7 +216,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginStart="100dp"
-                            android:fontFamily="@font/trebuc"
+                            android:fontFamily="@font/kalpurush"
                             android:text="user name "
                             android:textColor="@color/black"
                             android:textSize="12sp"
@@ -232,7 +232,7 @@
                             android:layout_marginEnd="10dp"
                             android:fontFamily="@font/kalpurush"
                             android:padding="2dp"
-                            android:text="                    পবিত্র ঈদের সালামী দিন \nআখিরাতের অ দুনিয়ার কামিয়াবী আদায় করুন"
+                            android:text="                    পবিত্র ঈদের সালামী দিন \nআখিরাতের ও দুনিয়ার কামিয়াবী আদায় করুন"
                             android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
@@ -402,7 +402,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginStart="100dp"
-                            android:fontFamily="@font/trebuc"
+                            android:fontFamily="@font/kalpurush"
                             android:text="user name "
                             android:textColor="@color/black"
                             android:textSize="12sp"
@@ -570,7 +570,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginStart="100dp"
-                            android:fontFamily="@font/trebuc"
+                            android:fontFamily="@font/kalpurush"
                             android:text="user name "
                             android:textColor="@color/black"
                             android:textSize="12sp"
@@ -585,7 +585,7 @@
                             android:layout_marginEnd="10dp"
                             android:fontFamily="@font/kalpurush"
                             android:padding="2dp"
-                            android:text="আমার বড় ভাই ও বোনেরা  আমার ঈদের সালাম নিন এবং আসন্ন ঈদুল ফিতর উপলক্ষে আপনাদের আস্থাভাজন, স্নেহের মানুষটিকে ঈদ সালামী উক্ত নাম্বারে প্রেরণ করার অনুরধ জানাচ্ছি "
+                            android:text="আমার বড় ভাই ও বোনেরা  আমার সালাম নিন এবং আসন্ন ঈদুল ফিতর উপলক্ষে আপনাদের আস্থাভাজন, স্নেহের মানুষটিকে ঈদ সালামী উক্ত নাম্বারে প্রেরণ করার অনুরোধ জানাচ্ছি "
                             android:textColor="@color/black"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -693,18 +693,18 @@
 
                     <LinearLayout
                         android:layout_width="350dp"
-                        android:layout_height="300dp"
+                        android:layout_height="350dp"
                         android:layout_gravity="center"
                         android:background="@drawable/eid_card_six"
                         android:orientation="vertical">
 
                         <ImageView
                             android:id="@+id/imageIv5"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="left"
-                            android:layout_marginStart="5dp"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_gravity="right"
                             android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
                             android:src="@drawable/ic_person" />
 
 
@@ -713,23 +713,23 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginStart="35dp"
-                            android:fontFamily="@font/trebuc"
+                            android:layout_marginStart="45dp"
+                            android:fontFamily="@font/kalpurush"
                             android:text="user name "
                             android:textColor="@color/black"
-                            android:textSize="20sp"
+                            android:textSize="17sp"
                             android:textStyle="bold" />
 
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="140dp"
+                            android:layout_marginStart="145dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginEnd="10dp"
                             android:fontFamily="@font/kalpurush"
                             android:padding="2dp"
-                            android:text="আমার বড় ভাই ও বোনেরা  আমার ঈদের সালাম নিন এবং আসন্ন ঈদুল ফিতর উপলক্ষে আপনাদের আস্থাভাজন, স্নেহের মানুষটিকে ঈদ সালামী উক্ত নাম্বারে প্রেরণ করার অনুরধ জানাচ্ছি "
+                            android:text="আমার বড় ভাই ও বোনেরা  আমার সালাম নিন এবং আসন্ন ঈদুল ফিতর উপলক্ষে আপনাদের আস্থাভাজন, স্নেহের মানুষটিকে ঈদ সালামী উক্ত নাম্বারে প্রেরণ করার অনুরোধ জানাচ্ছি "
                             android:textColor="@color/black"
                             android:textSize="13sp"
                             android:textStyle="bold" />
@@ -739,7 +739,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginStart="110dp"
-                            android:layout_marginTop="55dp"
+                            android:layout_marginTop="95dp"
                             android:orientation="horizontal"
                             android:weightSum="2">
 
@@ -838,17 +838,17 @@
 
                     <LinearLayout
                         android:layout_width="350dp"
-                        android:layout_height="300dp"
+                        android:layout_height="350dp"
                         android:layout_gravity="center"
                         android:background="@drawable/eid_card_seven"
                         android:orientation="vertical">
 
                         <ImageView
                             android:id="@+id/imageIv6"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
                             android:layout_gravity="center"
-                            android:layout_marginTop="80dp"
+                            android:layout_marginTop="100dp"
                             android:src="@drawable/ic_person" />
 
 
@@ -857,7 +857,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:fontFamily="@font/trebuc"
+                            android:fontFamily="@font/kalpurush"
                             android:text="user name "
                             android:textColor="@color/black"
                             android:textSize="12sp"
@@ -872,7 +872,7 @@
                             android:layout_marginEnd="10dp"
                             android:fontFamily="@font/kalpurush"
                             android:padding="2dp"
-                            android:text="আমার বড় ভাই ও বোনেরা  আমার ঈদের সালাম নিন এবং আসন্ন ঈদুল ফিতর উপলক্ষে আপনাদের আস্থাভাজন, স্নেহের মানুষটিকে ঈদ সালামী উক্ত নাম্বারে প্রেরণ করার অনুরধ জানাচ্ছি "
+                            android:text="আমার বড় ভাই ও বোনেরা  আমার সালাম নিন এবং আসন্ন ঈদুল ফিতর উপলক্ষে আপনাদের আস্থাভাজন, স্নেহের মানুষটিকে ঈদ সালামী উক্ত নাম্বারে প্রেরণ করার অনুরোধ জানাচ্ছি "
                             android:textColor="@color/black"
                             android:textSize="12sp"
                             android:textStyle="bold" />
@@ -881,8 +881,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginStart="110dp"
-                            android:layout_marginTop="25dp"
+                            android:layout_marginTop="75dp"
                             android:orientation="horizontal"
                             android:weightSum="2">
 

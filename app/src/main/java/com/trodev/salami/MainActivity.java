@@ -28,6 +28,11 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -89,7 +94,11 @@ public class MainActivity extends AppCompatActivity {
                     // passing data on another activity
                     Intent intent = new Intent(MainActivity.this, NumberActivity.class);
                     intent.putExtra("surename", surename);
-                    intent.putExtra("avater", imageViewToByte());
+                    try {
+                        intent.putExtra("avater", imageViewToByte());
+                    } catch (FileNotFoundException e) {
+                        throw new RuntimeException(e);
+                    }
                     startActivity(intent);
                 }
 
@@ -106,11 +115,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private byte[] imageViewToByte() {
+    private byte[] imageViewToByte() throws FileNotFoundException {
 
         Bitmap bitmap = ((BitmapDrawable) imageIv.getDrawable()).getBitmap();
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 60, byteArrayOutputStream);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 10, byteArrayOutputStream);
         byte[] bytes = byteArrayOutputStream.toByteArray();
 
         return bytes;

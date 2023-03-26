@@ -41,7 +41,7 @@
         android:fontFamily="@font/shorif_sayef"
         android:text="আপনার ছবি আপলোড করতে ইমেজে ক্লিক করুন"
         android:textColor="@color/black"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/imageIv"
@@ -49,7 +49,8 @@
         android:layout_height="250dp"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        android:src="@drawable/ic_image" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/asset" />
 
     <EditText
         android:id="@+id/nameEt"
@@ -59,11 +60,13 @@
         android:layout_margin="10dp"
         android:background="@drawable/edittext_shape"
         android:ems="10"
-        android:fontFamily="@font/shorif_sayef"
+        android:fontFamily="@font/kalpurush"
         android:hint="আপনার নাম লিখুন"
         android:inputType="text"
         android:padding="15dp"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
 
 
     <Button
