@@ -119,7 +119,14 @@ public class MainActivity extends AppCompatActivity {
 
         Bitmap bitmap = ((BitmapDrawable) imageIv.getDrawable()).getBitmap();
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 10, byteArrayOutputStream);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+        try {
+            byteArrayOutputStream.flush();
+            byteArrayOutputStream.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         byte[] bytes = byteArrayOutputStream.toByteArray();
 
         return bytes;

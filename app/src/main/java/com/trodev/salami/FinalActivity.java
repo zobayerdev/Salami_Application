@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -31,6 +32,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Objects;
 
 public class FinalActivity extends AppCompatActivity {
@@ -42,6 +46,10 @@ public class FinalActivity extends AppCompatActivity {
     TextView name4, bikash4, nogod4, upay4, rocket4;
     TextView name5, bikash5, nogod5, upay5, rocket5;
     TextView name6, bikash6, nogod6, upay6, rocket6;
+
+    private ImageView imageIv;
+
+    Bitmap bitmap ;
 
     //icon for user image
     ImageView imageView, imageView2, imageIv3, imageIv4, imageIv5, imageIv6, imageIv7, imageIv8, imageIv9, imageIv10;
@@ -64,6 +72,8 @@ public class FinalActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.navigation_view);
 
+
+        imageIv = findViewById(R.id.imageIv);
 
         // #######################
         // Drawer Layout implement
@@ -128,7 +138,11 @@ public class FinalActivity extends AppCompatActivity {
         String sureupay = getIntent().getStringExtra("sureupay");
         String surerocket = getIntent().getStringExtra("surerocket");
 
-        byte[] bytes = getIntent().getByteArrayExtra("avater");
+        String  imageViewToByte ;
+
+        byte[] bytes = new byte[0];
+        bytes = getIntent().getByteArrayExtra("avater");
+
         Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
 
 
@@ -173,6 +187,24 @@ public class FinalActivity extends AppCompatActivity {
 
 
     }
+
+    private byte[] imageViewToByte() throws FileNotFoundException {
+
+        Bitmap bitmap = ((BitmapDrawable) imageIv.getDrawable()).getBitmap();
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+        try {
+            byteArrayOutputStream.flush();
+            byteArrayOutputStream.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        byte[] bytes = byteArrayOutputStream.toByteArray();
+
+        return bytes;
+    }
+
 
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
